@@ -1,151 +1,244 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en">    
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Developer Portfolio</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-
 <body>
 
-<header>
+    <!--Navigation menu-->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="100">
+                <span>Mahinsa</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#">Projects</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#">Services</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600"><a href="#">Contacts</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Skills</a>
+                <a href="#">Projects</a>
+                <a href="#">Services</a>
+                <a href="#">Contacts</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="main-container">
+            <div class="image" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="100">
+                <img src="main.jpg" alt="">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="100">
+                    Hey I'm <span>Mahinsa</span>
+                </h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="100">
+                    I'm a&nbsp;
+                    <span class="typewriter-text"></span>
+                    <label for=""></label>
+                </div>
+                <p data-aos="fade-left" data-aos-duration="1500" data-aos-delay="100">Welcome to my portfolio! I am Mahinsa, a passionate and dedicated professional specializing in web development, design, and creative solutions. With a strong commitment to excellence, I strive to transform ideas into impactful digital experiences. My expertise lies in creating user-friendly, visually appealing, and functional designs that cater to the unique needs of each client.
+                I believe in the power of collaboration and innovation to bring ideas to life. Whether it's building responsive websites, designing captivating graphics, or developing efficient applications, I am dedicated to delivering high-quality results that exceed expectations. Explore my work, and let’s embark on a journey to create something extraordinary together.</p>
+                    <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-github" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="100"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="100"></i></a>
+                </div>
+                <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="100">
+                    <button>Hire Me</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h2 class="logo">DevPortfolio</h2>
 
-<nav>
+    <!--About Section Start-->
 
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+    <section class="about" id="about">
+        <div class="container">
+            <div class="title"><span>About Me</span></div>
+            <div class="about-details">
+                <div class="left" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="100">
+                    <img src="main.jpg" alt="">
+                </div>
+                <div class="right">
+                    <div class="topic data-aos="fade-left" data-aos-duration="1500" data-aos-delay="100"">Designing Is My Passion</div>
+                    <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="100">
+                        I am a creative and detail-oriented professional with a strong passion for designing and developing innovative solutions. With years of experience in the industry, I have honed my skills in crafting user-friendly designs and delivering high-quality projects. My goal is to bring ideas to life and exceed client expectations through dedication and expertise.
+                    </p>
+                    <div class="button" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="100">
+                        <button>Download CV</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</nav>
 
-<button id="themeToggle">🌙</button>
+    <!--My Skill Section Start-->
+    <section class="skills" id="skills">
+        <div class="content">
+            <div class="title"><span>My Skills</span></div>
+            <div class="skills-details">
+                <div class="text">
+                    <div class="topic">
+                        Sklls Reflects Our Knowledge
+                    </div>
+                    <p data-aos="fade-right">My skills reflect my dedication to continuous learning and professional growth. I specialize in front-end and back-end development, creating responsive and visually appealing designs. With expertise in HTML, CSS, JavaScript, PHP, and Python, I am equipped to handle diverse challenges and deliver exceptional results.</p>
+                    <div class="experience">
+                        <div class="num">10</div>
+                        <div class="exp">
+                            Years Of <br/>
+                            Experience
+                        </div>
+                    </div>
+                </div>
+                <div class="boxes">
+                    <div class="box">
+                        <div class="topic">HTML</div>
+                        <div class="per">90%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic">CSS</div>
+                        <div class="per">90%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic">JavaScript</div>
+                        <div class="per">90%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic">PHP</div>
+                        <div class="per">90%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic">PYTHON</div>
+                        <div class="per">90%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</header>
+    <!--My Service Section Start-->
+    <section class="services" id="services">
+        <div class="content">
+            <div class="title"><span>My Services</span></div>
+            <div class="boxes">
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="topic">Web Development</div>
+                    <p>Building responsive and dynamic websites</p>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="topic">Graphic Design</div>
+                    <p>Crafting visually stunning designs and branding materials</p>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="topic">Digital Marketing</div>
+                    <p>Enhancing your online presence and driving engagement.</p>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <div class="topic">Icon Design</div>
+                    <p>Creating unique and memorable icons for your projects.</p>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-camera-retro"></i>
+                    </div>
+                    <div class="topic">Photography</div>
+                    <p>Capturing moments with creativity and precision.</p>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-tablet-alt"></i>
+                    </div>
+                    <div class="topic">Apps Development</div>
+                    <p>Developing user-friendly and efficient mobile applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="hero">
+    <!--Contact Me Section Start-->
+    <section class="contact" id="contact">
+        <div class="content">
+            <div class="title"><span>Contact Me</span></div>
+            <div class="text">
+                <div class="topic">Have Any Project?</div>
+                <p>afjauihfiauhfi</p>
+                <div class="button">
+                    <button>Let's Chat</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h1>Hello I'm <span>Your Name</span></h1>
+    <!--Footer Section Start-->
+    <footer>
+        <div class="text">
+            <span>Created By <a href="#">Mahinsa Nethmina</a> | &#169; 2026 All Rights Reserved</span>
+        </div>
+    </footer>
 
-<p>Full Stack Developer building scalable applications</p>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({offset:0});
+    </script>
+    <script>
+        const typewriterText = document.querySelector('.typewriter-text');
+        const words = ['Web Developer', 'Designer', 'Freelancer'];
+        let wordIndex = 0;
+        let letterIndex = 0;
+        let isDeleting = false;
 
-<a class="btn" href="#projects">View Projects</a>
+        function type() {
+            const currentWord = words[wordIndex];
+            const currentText = isDeleting
+                ? currentWord.substring(0, letterIndex--)
+                : currentWord.substring(0, letterIndex++);
 
-</section>
+            typewriterText.textContent = currentText;
 
-<section id="github" data-aos="fade-up">
+            if (!isDeleting && letterIndex === currentWord.length) {
+                isDeleting = true;
+                setTimeout(type, 1000); // Pause before deleting
+            } else if (isDeleting && letterIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                setTimeout(type, 500); // Pause before typing next word
+            } else {
+                setTimeout(type, isDeleting ? 100 : 200); // Typing speed
+            }
+        }
 
-<h2>GitHub Stats</h2>
-
-<div class="stats">
-
-<div>
-<h3 id="repos">0</h3>
-<p>Repositories</p>
-</div>
-
-<div>
-<h3 id="followers">0</h3>
-<p>Followers</p>
-</div>
-
-<div>
-<h3 id="following">0</h3>
-<p>Following</p>
-</div>
-
-</div>
-
-<img class="contribution" src="https://ghchart.rshah.org/YOUR_GITHUB_USERNAME">
-
-</section>
-
-<section id="skills" data-aos="fade-up">
-
-<h2>Tech Stack</h2>
-
-<div class="skills">
-
-<div>HTML</div>
-<div>CSS</div>
-<div>JavaScript</div>
-<div>React</div>
-<div>Node.js</div>
-<div>MongoDB</div>
-<div>Express</div>
-<div>Docker</div>
-
-</div>
-
-</section>
-
-<section id="projects" data-aos="fade-up">
-
-<h2>Projects</h2>
-
-<div class="projects">
-
-<div class="card">
-
-<img src="assets/project1.png">
-
-<h3>Task Manager</h3>
-
-<p>React + Node full stack productivity app</p>
-
-<div class="links">
-
-<a href="#">Live Demo</a>
-<a href="#">GitHub</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="contact" data-aos="fade-up">
-
-<h2>Contact Me</h2>
-
-<form action="https://formspree.io/f/YOUR_ID" method="POST">
-
-<input type="text" name="name" placeholder="Name" required>
-
-<input type="email" name="email" placeholder="Email" required>
-
-<textarea name="message" placeholder="Message"></textarea>
-
-<button type="submit">Send Message</button>
-
-</form>
-
-</section>
-
-<footer>
-
-<p>© 2026 Your Name</p>
-
-</footer>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<script src="script.js"></script>
-
+        type();
+    </script>
 </body>
-
 </html>
