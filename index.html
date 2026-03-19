@@ -40,7 +40,7 @@ window.addEventListener("scroll", function() {
     <nav>
         <div class="nav-container">
             <div class="logo" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="100">
-                <span>Mahinsa</span>
+                <span>Mahinsa Nethmina</span>
             </div>
             <div class="links">
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#">Home</a></div>
@@ -138,26 +138,40 @@ window.addEventListener("scroll", function() {
                     </div>
                 </div>
                 <div class="boxes">
-                    <div class="box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-                        <div class="topic">HTML</div>
-                        <div class="per">90%</div>
-                    </div>
-                    <div class="box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
-                        <div class="topic">CSS</div>
-                        <div class="per">90%</div>
-                    </div>
-                    <div class="box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
-                        <div class="topic">JavaScript</div>
-                        <div class="per">90%</div>
-                    </div>
-                    <div class="box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
-                        <div class="topic">PHP</div>
-                        <div class="per">90%</div>
-                    </div>
-                    <div class="box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
-                        <div class="topic">PYTHON</div>
-                        <div class="per">90%</div>
-                    </div>
+                    <div class="box">
+    <div class="topic">HTML</div>
+    <div class="progress-bar">
+        <div class="progress html"></div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="topic">CSS</div>
+    <div class="progress-bar">
+        <div class="progress css"></div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="topic">JavaScript</div>
+    <div class="progress-bar">
+        <div class="progress js"></div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="topic">PHP</div>
+    <div class="progress-bar">
+        <div class="progress php"></div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="topic">Python</div>
+    <div class="progress-bar">
+        <div class="progress python"></div>
+    </div>
+</div>
                 </div>
             </div>
         </div>
@@ -174,6 +188,13 @@ window.addEventListener("scroll", function() {
                     <a href="#" target="_blank">Live Demo</a><br>
                     <a href="#" target="_blank">Source Code</a>
                 </div>
+                <div class="box">
+    <img src="project1.jpg" alt="">
+    <h3>Weather App</h3>
+    <p>Real-time weather using API</p>
+    <a href="#">Live Demo</a>
+    <a href="#">Code</a>
+</div>
             </div>
         </div>
     </section>
@@ -233,11 +254,12 @@ window.addEventListener("scroll", function() {
     <section class="contact" id="contact">
         <div class="content">
             <div class="title"><span>Contact Me</span></div>
-            <div class="text">
-                <div class="topic">Have Any Project?</div>
-                <p>Let's connect and bring your ideas to life! Whether you have a project in mind, need assistance with design or development, or simply want to collaborate, I am here to help. Feel free to reach out, and let's discuss how we can work together to create something extraordinary.</p>
-                <div class="button" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="100">
-                    <button>Let's Chat</button>
+            <form action="https://formspree.io/f/your-id" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required><br>
+    <input type="email" name="email" placeholder="Your Email" required><br>
+    <textarea name="message" placeholder="Your Message" required></textarea><br>
+    <button type="submit">Send Message</button>
+</form>
                 </div>
             </div>
         </div>
@@ -283,6 +305,26 @@ window.addEventListener("scroll", function() {
 
         type();
     </script>
+
+<script>
+window.addEventListener("scroll", () => {
+    const skills = document.querySelector(".skills");
+    const progressBars = document.querySelectorAll(".progress");
+
+    const sectionTop = skills.offsetTop;
+    const screenPosition = window.scrollY + window.innerHeight;
+
+    if (screenPosition > sectionTop) {
+        progressBars.forEach(bar => {
+            bar.style.width = bar.classList.contains("html") ? "90%" :
+                              bar.classList.contains("css") ? "90%" :
+                              bar.classList.contains("js") ? "85%" :
+                              bar.classList.contains("php") ? "80%" :
+                              bar.classList.contains("python") ? "85%" : "0";
+        });
+    }
+});
+</script>
 
 </body>
 </html>

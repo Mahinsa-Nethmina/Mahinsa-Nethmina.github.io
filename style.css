@@ -427,6 +427,30 @@ section .main-container{
     color: #b74b4b;
 }
 
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background: #b74b4b;
+    border-radius: 10px;
+    transition: width 1.5s ease-in-out;
+}
+
+/* Skill Levels */
+.progress.html { width: 90%; }
+.progress.css { width: 90%; }
+.progress.js { width: 85%; }
+.progress.php { width: 80%; }
+.progress.python { width: 85%; }
+
 .projects .boxes {
     display: flex;
     flex-wrap: wrap;
@@ -447,6 +471,18 @@ section .main-container{
 .projects .box:hover {
     transform: translateY(-10px);
     background: #b74b4b;
+}
+
+.projects .box img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.projects .box a {
+    display: inline-block;
+    margin: 5px;
+    color: #b74b4b;
 }
 
 .services .boxes{
@@ -504,6 +540,31 @@ section .main-container{
     width: 80%;
     text-align: center;
     margin: 0 auto;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.contact button {
+    background: #b74b4b;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 footer{
