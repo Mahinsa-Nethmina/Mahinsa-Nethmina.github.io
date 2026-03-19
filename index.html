@@ -8,6 +8,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
+
+<script>
+    function hamburg() {
+        document.querySelector(".dropdown").style.transform = "translateY(0)";
+    }
+
+    function cancel() {
+        document.querySelector(".dropdown").style.transform = "translateY(-500px)";
+    }
+</script>
+
+<script>
+window.addEventListener("scroll", function() {
+    const scrollBtn = document.querySelector(".scroll-button a");
+    if (window.scrollY > 300) {
+        scrollBtn.style.display = "block";
+    } else {
+        scrollBtn.style.display = "none";
+    }
+});
+</script>
+
+<div class="scroll-button">
+    <a href="#">↑</a>
+</div>
+
 <body>
 
     <!--Navigation menu-->
@@ -18,22 +44,22 @@
             </div>
             <div class="links">
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#">Home</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#">About</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#">Skills</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#">Projects</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#">Services</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600"><a href="#">Contacts</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#about">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#skills">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#projects">Projects</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#services">Services</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600"><a href="#contact">Contacts</a></div>
             </div>
             <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
         </div>
         <div class="dropdown">
             <div class="links">
                 <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Skills</a>
-                <a href="#">Projects</a>
-                <a href="#">Services</a>
-                <a href="#">Contacts</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contacts</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
         </div>
@@ -55,13 +81,15 @@
                 <p data-aos="fade-left" data-aos-duration="1500" data-aos-delay="100">Welcome to my portfolio! I am Mahinsa, a passionate and dedicated professional specializing in web development, design, and creative solutions. With a strong commitment to excellence, I strive to transform ideas into impactful digital experiences. My expertise lies in creating user-friendly, visually appealing, and functional designs that cater to the unique needs of each client.
                 I believe in the power of collaboration and innovation to bring ideas to life. Whether it's building responsive websites, designing captivating graphics, or developing efficient applications, I am dedicated to delivering high-quality results that exceed expectations. Explore my work, and let’s embark on a journey to create something extraordinary together.</p>
                     <div class="social-links">
-                    <a href="#"><i class="fa-brands fa-github" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"></i></a>
+                    <a href="https://github.com/Mahinsa-Nethmina" target="_blank"><i class="fa-brands fa-github" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"></i></a>
                     <a href="#"><i class="fa-brands fa-facebook" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="100"></i></a>
                     <a href="#"><i class="fa-brands fa-linkedin" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"></i></a>
                     <a href="#"><i class="fa-brands fa-twitter" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="100"></i></a>
                 </div>
                 <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="100">
-                    <button>Hire Me</button>
+                    <a href="#contact">
+                        <button>Hire Me</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -98,7 +126,7 @@
             <div class="skills-details">
                 <div class="text">
                     <div class="topic">
-                        Sklls Reflects Our Knowledge
+                        Skills Reflect Our Knowledge
                     </div>
                     <p data-aos="fade-left" data-aos-duration="1500" data-aos-delay="100">My skills reflect my dedication to continuous learning and professional growth. I specialize in front-end and back-end development, creating responsive and visually appealing designs. With expertise in HTML, CSS, JavaScript, PHP, and Python, I am equipped to handle diverse challenges and deliver exceptional results.</p>
                     <div class="experience" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="100">
@@ -130,6 +158,21 @@
                         <div class="topic">PYTHON</div>
                         <div class="per">90%</div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--Projects Section Start-->
+    <section id="projects">
+        <div class="content">
+            <div class="title"><span>My Projects</span></div>
+            <div class="boxes">
+                <div class="box">
+                    <h3>Weather App</h3>
+                    <p>Real-time weather using API</p>
+                    <a href="#" target="_blank">Live Demo</a><br>
+                    <a href="#" target="_blank">Source Code</a>
                 </div>
             </div>
         </div>
@@ -240,5 +283,6 @@
 
         type();
     </script>
+
 </body>
 </html>

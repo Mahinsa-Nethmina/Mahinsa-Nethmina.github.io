@@ -87,7 +87,7 @@ nav{
     position: absolute;
     content: "";
     bottom: -3px;
-    left: o;
+    left: 0;
     width: 0%;
     height: 3px;
     background-color: #b74b4b;
@@ -129,6 +129,7 @@ nav{
 }
 
 section{
+    padding: 60px 0;
     width: 100%;
     min-height: 90vh;
 }
@@ -244,11 +245,11 @@ section .main-container{
 .content button{
     width: 50%;
     height: 6vh;
-    margin: 300px;
+    margin: 20px 0;
     background-color: #b74b4b;
     color: white;
     border: none;
-    outline: 120%;
+    outline: none;
     font-weight: 700;
     border-radius: 5px;
     transition: 0.2s linear;
@@ -267,7 +268,7 @@ section .main-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -200px; /* Ensure spacing above the button */
+    margin-top: 20px; /* Ensure spacing above the button */
     flex-direction: column;
 }
 
@@ -295,7 +296,7 @@ section .main-container{
     section .content{
         width: 80%;
         margin: 0px auto;
-        font-family: 'Popins', sans-serif;
+        font-family: 'Poppins', sans-serif;
     }
     .about .about-details{
         display: flex;
@@ -426,6 +427,28 @@ section .main-container{
     color: #b74b4b;
 }
 
+.projects .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.projects .box {
+    width: calc(100%/3 - 20px);
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 12px;
+    background: #111;
+    color: white;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.projects .box:hover {
+    transform: translateY(-10px);
+    background: #b74b4b;
+}
+
 .services .boxes{
     display: flex;
     flex-wrap: wrap;
@@ -440,11 +463,12 @@ section .main-container{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
     cursor: default;
     color: white;
-    transition: all 0.4s ease;
+    transition: all 0.4s ease, transform 0.3s;
 }
 .services .boxes .box:hover{
     background: #b74b4b;
     color: #fff;
+    transform: translateY(-10px);
 }
 .services .boxes .box .icon{
     height: 50px;
@@ -464,12 +488,8 @@ section .main-container{
 }
 .services .boxes .box:hover .topic,
 .services .boxes .box:hover p{
-    color: white;
-    transition: all 0.4s ease;
-}
-.services .boxes .box:hover .topic,
-.services .boxes .box:hover p{
     color: #fff;
+    transition: all 0.4s ease;
 }
 
 /*Contact Me CSS*/
@@ -483,14 +503,14 @@ section .main-container{
 .contact .text{
     width: 80%;
     text-align: center;
-    margin: -150px;
+    margin: 0 auto;
 }
 
 footer{
     background: #b74b4b;
     padding: 15px 0;
     text-align: center;
-    font-family: 'Popins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 footer .text span{
     font-size: 17px;
@@ -575,7 +595,7 @@ footer .text span a:hover{
     }
 
     .main-container .image{
-        z-index: -1;
+        z-index: 1;
         width: 50%;
             height: 60%;
     }
@@ -604,7 +624,7 @@ footer .text span a:hover{
 }
 
 @media (max-width: 500px){
-    main-container .image{
+    .main-container .image{
             width: 50%;
             height: 60%;
             margin-bottom: 0px;
