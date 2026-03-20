@@ -273,7 +273,7 @@ section .main-container{
 }
 
 .btn button {
-    width: 10%; /* Make the button longer */
+    width: 100%; /* Make the button longer */
     padding: 15px 20px;
     background-color: #b74b4b;
     color: white;
